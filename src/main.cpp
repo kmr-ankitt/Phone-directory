@@ -85,17 +85,17 @@ void dlist::accept()
     char ans;
     do
     {
-        cout << "ENTER NAME      :";
+        cout << "ENTER NAME      : ";
         cin >> name;
         // cin.getline (name,30);
-        cout << "ENTER NUMBER    :";
+        cout << "ENTER NUMBER    : ";
         cin >> number;
         while (strlen(number) != 10)
         {
-            cout << "ENTER VALID NUMBER  :";
+            cout << "ENTER VALID NUMBER  : ";
             cin >> number;
         }
-        cout << "ENTER G-MAIL    :";
+        cout << "ENTER G-MAIL    : ";
         cin >> gmail;
         temp = new dnode(name, number, gmail);
         if (head == NULL)
@@ -112,7 +112,7 @@ void dlist::accept()
             ptr->next = temp;
             temp->prev = ptr;
         }
-        cout << "DO YOU WANT TO CONTINUE?????????";
+        cout << "DO YOU WANT TO CONTINUE????????? ";
         cin >> ans;
     } while (ans == 'y');
 }
@@ -191,7 +191,7 @@ void dlist::deletecontact(char s[20])
     }
     if (c == 2)
     {
-        cout << "YOUR ENTERED NAME IS NOT IN THE LIST...";
+        cout << "YOUR ENTERED NAME IS NOT IN THE LIST... ";
     }
 }
 void dlist::deletesamename()
@@ -330,24 +330,24 @@ void dlist::update(char n[20])
                 switch (c)
                 {
                 case 1:
-                    cout << "ENTER NEW-NAME=";
+                    cout << "ENTER NEW-NAME= ";
                     cin >> ptr->name;
                     break;
                 case 2:
-                    cout << "ENTER NEW PHONE-NUMBER?";
+                    cout << "ENTER NEW PHONE-NUMBER? ";
                     cin >> ptr->number;
                     while (strlen(ptr->number) != 10)
                     {
-                        cout << "ENTER VALID NUMBER  :";
+                        cout << "ENTER VALID NUMBER  : ";
                         cin >> ptr->number;
                     }
                     break;
                 case 3:
-                    cout << "ENTER NEW G-MAIL";
+                    cout << "ENTER NEW G-MAIL ";
                     cin >> ptr->gmail;
                     break;
                 }
-                cout << "DO YOU WANT TO CONTINUE UPDATING?";
+                cout << "DO YOU WANT TO CONTINUE UPDATING? ";
                 cin >> ans;
             } while (ans == 'y');
         }
@@ -366,7 +366,7 @@ int main()
     char ans;
     int ch, a;
     cout << "**************                                PHONE BOOK                          ********************";
-    cout << "\n\nWHAT IS YOUR NAME?\n";
+    cout << "\n\nWHAT IS YOUR NAME? ";
     cin.getline(name, 20);
     cout << "\n\n!!!!!!!!!!!!!!!!!!!!!!!   WELCOME " << name << "   !!!!!!!!!!!!!!!!!!!!!";
     cout << "\n\n\nLET'S CREATE OUR PHONEBOOK " << name << "  \n\n";
@@ -410,7 +410,7 @@ int main()
         case 7:
             do
             {
-                cout << "1.SEARCH BY NAME\n2.SEARCH BY NUMBER\n3.SEARCH BY GMAIL";
+                cout << "1.SEARCH BY NAME\n2.SEARCH BY NUMBER\n3.SEARCH BY GMAIL ";
                 cin >> a;
                 switch (a)
                 {
@@ -432,7 +432,7 @@ int main()
                 default:
                     cout << "\nNO PROPER INPUT GIVEN.....\n";
                 }
-                cout << "DO YOU WANT TO CONTINUE SEARCHING?????????";
+                cout << "DO YOU WANT TO CONTINUE SEARCHING????????? ";
                 cin >> ans;
             } while (ans == 'y');
 
@@ -444,7 +444,7 @@ int main()
         default:
             cout << "\nNO PROPER INPUT GIVEN..\n";
         }
-        cout << "\n\nDO YOU WANT TO CONTINUE OPERATIONS?????????";
+        cout << "\n\nDO YOU WANT TO CONTINUE OPERATIONS????????? ";
         cin >> ans;
     } while (ans == 'y');
 }
